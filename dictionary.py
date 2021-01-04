@@ -12,6 +12,6 @@ if __name__ == "__main__":
     print(game)
 
     for c in game.get('character'):
-        if c == 'character 2':
+        if c in 'character 2':
             print(c)
             break
