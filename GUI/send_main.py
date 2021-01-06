@@ -18,7 +18,7 @@ def sendMail():
 
         smtp = smtplib.SMTP('smtp.gmail.com', 587)
         smtp.starttls()
-        smtp.login('test@geniustree.co.th', 'mytestpassword')
+        smtp.login('username', 'password')
         smtp.sendmail(txt_mail_from.get(), txt_mail_to.get(), message.as_string())
         smtp.quit()
 
