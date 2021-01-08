@@ -36,6 +36,7 @@ def sendMailAsync():
         tkinter.messagebox.showerror('Warring', 'Please insert mail message')
     else:
         threading.Thread.start_new_thread(sendMail)
+        # sendMail()
 
 
 main_form = Tk()
@@ -49,7 +50,7 @@ txt_mail_from = Entry(main_form, width=50)
 txt_mail_to = Entry(main_form, width=50)
 txt_mail_message = Text(main_form)
 
-btn_send = Button(main_form, text="Send Mail", command=sendMail)
+btn_send = Button(main_form, text="Send Mail", command=sendMailAsync)
 
 # set component layout
 lb_mail_from.grid(row=0, column=0, sticky=N)
