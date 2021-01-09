@@ -1,10 +1,12 @@
 import smtplib
 import threading
 
+from email import encoders
 from tkinter import *
 import tkinter.messagebox
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
 
 
 def sendMail():
@@ -16,9 +18,18 @@ def sendMail():
 
         message.attach(MIMEText(txt_mail_message.get("1.0", END), 'plain'))
 
+        attach_file_name = 'Intel_X86.pdf'
+        attach_file = open(attach_file_name, 'rb')  # Open the file as binary mode
+        payload = MIMEBase('application', 'octate-stream')
+        payload.set_payload(attach_file.read())
+        encoders.encode_base64(payload)  # encode the attachment
+        # add payload header with filename
+        payload.add_header('Content-Decomposition', 'attachment', filename=attach_file_name)
+        message.attach(payload)
+
         smtp = smtplib.SMTP('smtp.gmail.com', 587)
         smtp.starttls()
-        smtp.login('username', 'password')
+        smtp.login('test@geniustree.co.th', 'mytestpassword')
         smtp.sendmail(txt_mail_from.get(), txt_mail_to.get(), message.as_string())
         smtp.quit()
 
@@ -49,7 +60,7 @@ txt_mail_from = Entry(main_form, width=50)
 txt_mail_to = Entry(main_form, width=50)
 txt_mail_message = Text(main_form)
 
-btn_send = Button(main_form, text="Send Mail", command=sendMail)
+btn_send = Button(main_form, text="Send Mail", command=sendMailAsync)
 
 # set component layout
 lb_mail_from.grid(row=0, column=0, sticky=N)
@@ -64,5 +75,4 @@ btn_send.grid(row=3, column=1)
 
 # pack component to form
 # lb_mail_from.pack()
-
 main_form.mainloop()
