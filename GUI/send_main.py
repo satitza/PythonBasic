@@ -47,6 +47,7 @@ def sendMailAsync():
         tkinter.messagebox.showerror('Warring', 'Please insert mail message')
     else:
         threading.Thread.start_new_thread(sendMail)
+        # sendMail()
 
 
 main_form = Tk()
