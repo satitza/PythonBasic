@@ -1,3 +1,6 @@
+import sys
+
+
 def outerFunction():
     print('Outer method')
 
@@ -16,3 +19,4 @@ if __name__ == "__main__":
     outerFunction()
 
     arr = [1, 2, 3, 4, 5, 6]
+    print(sys.path)
