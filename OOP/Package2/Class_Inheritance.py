@@ -4,4 +4,4 @@ class SupperClass(object):
         print('This constructor of supper class')
 
     def methodForImplement(self):
-        raise NotImplementedError('The subclass must implement this method 555')
+        raise NotImplementedError('The subclass must implement this method')

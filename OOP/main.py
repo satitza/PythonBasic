@@ -1,6 +1,5 @@
-from Package1.P1Modules1 import ClassInP1Modules1
 from Package1.P1Modules2 import P1Modules2Function1
-
+from Package1.P1Modules1 import ClassInP1Modules1
 from Package2.Class_Inheritance import SupperClass
 
 
