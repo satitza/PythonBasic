@@ -11,7 +11,5 @@ if __name__ == "__main__":
     print(len(game))
     print(game)
 
-    for c in game.get('character'):
-        if c in 'character 2':
-            print(c)
-            break
+    for k, v in game.items():
+        print(f'Key : {k}, Value : {v}')

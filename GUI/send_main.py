@@ -18,7 +18,7 @@ def sendMail():
 
         message.attach(MIMEText(txt_mail_message.get("1.0", END), 'plain'))
 
-        attach_file_name = 'Intel_X86.pdf'
+        attach_file_name = 'file/Intel_X86.pdf'
         attach_file = open(attach_file_name, 'rb')  # Open the file as binary mode
         payload = MIMEBase('application', 'octate-stream')
         payload.set_payload(attach_file.read())

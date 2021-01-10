@@ -1,4 +1,4 @@
-print('This is Modules 1 in Package 1')
+print(f'This is Modules 1 in Package 1 full name of modules is {__name__}')
 
 
 class ClassInP1Modules1:
