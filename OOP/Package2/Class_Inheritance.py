@@ -1,7 +1,12 @@
+def _private_method():
+    print('Private method')
+
+
+_private_var = 'private var'
+
+
 class SupperClass(object):
     static_number_supper_class = 100
-
-    _private_var = 'private var'
 
     def __init__(self):
         print('This constructor of supper')
@@ -18,6 +23,3 @@ class SupperClass(object):
             return __name__
         else:
             return 'This __str__ method from supper class'
-
-    def _private_method(self):
-        print('Private method')

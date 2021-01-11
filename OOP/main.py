@@ -1,7 +1,5 @@
-from Package1.P1Modules1 import ClassInP1Modules1
-from Package1.P1Modules2 import *
-
-from Package2.Class_Inheritance import *
+from Package1 import *
+from Package2 import *
 
 
 class SubClass(SupperClass):
@@ -47,6 +45,7 @@ if __name__ == '__main__':
     c.methodInClassInP1Modules1()
 
     P1Modules2Function1()
+    print(_private_var)
 
     ###########################################################
 
@@ -56,6 +55,8 @@ if __name__ == '__main__':
     print(SubClass.static_number_supper_class)
     print(SubClass.static_number_sub_class)
     print(sub.name)
+
+    sup = SupperClass()
 
     ############################################################
 
