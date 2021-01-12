@@ -22,6 +22,9 @@ class SubClass(SupperClass):
 
 
 class MyClass(object):
+    normal = 'normal'
+    _single = '_single'
+    __double = '__double'
 
     def __init__(self, name, desc):
         self.name = name
@@ -74,6 +77,12 @@ if __name__ == '__main__':
     sub.passMethod  # This is decorator properties method from supper class
 
     m = MyClass('My Class', 'Description for my class')
+
+    print(MyClass.normal)
+    print(MyClass._single)
+    print(MyClass._MyClass__double)
+    print(MyClass.__dict__)
+
     print(m)
     print(m.getClassName)
 
