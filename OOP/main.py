@@ -90,6 +90,20 @@ if __name__ == '__main__':
     for k, v in attr.items():
         print(f'Key : {k}, Value : {v}')
 
+    ###########################################################
+
+    user1 = User(1, 'user1', 'pass1')
+    user2 = User(1, 'user1', 'pass1')
+
+    print(id(user1))
+    print(id(user2))
+
+    user1.password = 'edit_pass2'
+
+    print(user1 == user2)
+
+
+
 
 else:
     pass
