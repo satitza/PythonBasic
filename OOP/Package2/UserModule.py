@@ -1,9 +1,9 @@
 class User(object):
 
     def __init__(self, id, username, password):
-        self.__id = id
-        self.__username = username
-        self.__password = password
+        self.id = id
+        self.username = username
+        self.password = password
 
     @property
     def id(self):
