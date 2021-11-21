@@ -92,7 +92,7 @@ if __name__ == '__main__':
 
     ###########################################################
 
-    user1 = User(1, 'user1', 'pass1')
+    user1 = User(id=1, username='user1', password='pass1')
     user2 = User(1, 'user1', 'pass1')
 
     print(id(user1))
