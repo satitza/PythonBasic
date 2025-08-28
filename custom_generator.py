@@ -13,4 +13,4 @@ if __name__ == "__main__":
     print(sys.getsizeof(custom_generator(50000)))
 
     for i in custom_generator(50000):
-        print(i)
+       print(i)
